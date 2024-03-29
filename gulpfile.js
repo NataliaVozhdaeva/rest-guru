@@ -27,7 +27,7 @@ function buildSvg() {
     src('src/assets/images/icons/*.svg')
       .pipe(svgSprite(config))
       // .pipe(dest('dist/images/img/icons'))
-      .pipe(dest('src/images/img/icons'))
+      .pipe(dest('src/assets/images/icons'))
   );
 }
 
