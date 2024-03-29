@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: local('Roboto'), url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+    url('../assets/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: local('Roboto'), url('../assets/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Roboto/Roboto-Medium.woff') format('woff'),
+    url('../assets/fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: local('Roboto'), url('../assets/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Roboto/Roboto-Bold.woff') format('woff'),
+    url('../assets/fonts/Roboto/Roboto-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  font-weight: 400;
+  src: local('Akrobat'), url('../assets/fonts/Akrobat/Akrobat-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Akrobat/Akrobat-Regular.woff') format('woff'),
+    url('../assets/fonts/Akrobat/Akrobat-Regular.otf') format('otf');
+}
+
+.header {
+  font-family: 'Akrobat', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 400;
+}
