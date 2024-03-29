@@ -23,25 +23,30 @@ const config = {
 };
 
 function buildSvg() {
-  return src('src/assets/images/icons/*.svg')
-    .pipe(svgSprite(config))
-    .pipe(dest('dist/images/img/icons'))
-    .pipe(dest('src/images/img/icons'));
+  return (
+    src('src/assets/images/icons/*.svg')
+      .pipe(svgSprite(config))
+      // .pipe(dest('dist/images/img/icons'))
+      .pipe(dest('src/images/img/icons'))
+  );
 }
 
 function buildSass() {
-  return src('src/styles/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('src/styles'))
-    .pipe(dest('dist/styles'))
-    .pipe(browserSync.stream());
+  return (
+    src('src/styles/**/*.scss')
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+      .on('error', sass.logError)
+      .pipe(sourcemaps.write('.'))
+      .pipe(dest('src/styles'))
+      // .pipe(dest('dist/styles'))
+      .pipe(browserSync.stream())
+  );
 }
 
 function html() {
-  return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
+  return src('src/**/*.html') /* .pipe(dest('dist/')) */
+    .pipe(browserSync.stream());
 }
 
 function serve() {

@@ -1,3 +1,5 @@
+@import './libs';
+
 @font-face {
   font-family: 'Roboto';
   font-weight: 400;
@@ -30,12 +32,52 @@
     url('../assets/fonts/Akrobat/Akrobat-Regular.otf') format('otf');
 }
 
+$text-color: #584b4d;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:visited {
+    color: $text-color;
+  }
+
+  &:hover {
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &:focus {
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &:active {
+    color: $text-color;
+    font-weight: 500;
+  }
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .header {
-  font-family: 'Akrobat', 'Arial', sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .main {
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-weight: 400;
+  font-family: 'Akrobat', Arial, sans-serif;
 }
