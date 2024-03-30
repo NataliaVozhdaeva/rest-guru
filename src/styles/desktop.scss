@@ -3,6 +3,8 @@
 .body {
   max-width: 1440px;
   margin: auto;
+
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .header {
@@ -17,10 +19,23 @@
 }
 
 .local {
+  display: flex;
+  height: 40px;
+
+  &:hover {
+    cursor: pointer;
+
+    & .local-current {
+      transform: scale(1.15);
+    }
+  }
+
   &-current {
+    align-self: center;
     margin-left: 20px;
 
     vertical-align: middle;
+    transition: 0.2s;
   }
 }
 
@@ -42,8 +57,6 @@
   }
 
   &-wrapper {
-    position: relative;
-
     display: flex;
 
     font-size: 17px;
@@ -65,10 +78,10 @@
     line-height: 40px;
 
     border: none;
-    border-radius: 10px;
 
     &:focus-visible {
       outline: none;
+      background-color: $text-dt--gray;
     }
 
     &::-webkit-input-placeholder {
@@ -101,5 +114,58 @@
     width: 1px;
     background-image: linear-gradient(white 5px, $input-border 5px, $input-border 33px, white);
     height: 100%;
+  }
+}
+
+.aside {
+  max-width: 1440px;
+  margin: auto;
+  padding: 13px;
+
+  background-color: $aside-panel;
+}
+
+.breadcrumps {
+  display: flex;
+
+  margin: 0 107px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+
+  &-item {
+    margin-right: 5px;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:not(:first-child)::before {
+      content: '/';
+      margin-right: 3px;
+    }
+  }
+
+  &-link {
+    color: #fff;
+
+    &:visited {
+      color: #fff;
+    }
+
+    &:focus {
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:active {
+      color: #fff;
+    }
   }
 }

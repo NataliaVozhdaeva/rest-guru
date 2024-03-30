@@ -32,6 +32,8 @@
     url('../assets/fonts/Akrobat/Akrobat-Regular.otf') format('otf');
 }
 
+@import './_libs';
+
 * {
   box-sizing: border-box;
 }
@@ -49,25 +51,6 @@ html {
 .link {
   text-decoration: none;
   transition: 0.3s;
-
-  &:visited {
-    color: $text-dark;
-  }
-
-  &:hover {
-    color: $text-dark;
-    font-weight: 500;
-  }
-
-  &:focus {
-    color: $text-dark;
-    font-weight: 500;
-  }
-
-  &:active {
-    color: $text-dark;
-    font-weight: 500;
-  }
 }
 
 .btn {
@@ -80,13 +63,9 @@ html {
     height: 40px;
     background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 63.63636363636363% -5px no-repeat, $bg;
     border-radius: 0 10px 10px 0;
+
+    &:hover {
+      background-color: $res-location;
+    }
   }
-}
-
-.header {
-  font-family: 'Roboto', Arial, sans-serif;
-}
-
-.main {
-  font-family: 'Akrobat', Arial, sans-serif;
 }
