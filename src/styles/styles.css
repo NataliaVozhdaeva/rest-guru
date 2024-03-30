@@ -335,6 +335,14 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  margin: 0;
+}
+
+.non-displayed {
+  display: none;
+}
+
 .list {
   list-style: none;
   padding: 0;

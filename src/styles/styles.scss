@@ -32,7 +32,7 @@
     url('../assets/fonts/Akrobat/Akrobat-Regular.otf') format('otf');
 }
 
-@import './_libs';
+@import './libs';
 
 * {
   box-sizing: border-box;
@@ -40,6 +40,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+p {
+  margin: 0;
+}
+
+.non-displayed {
+  display: none;
 }
 
 .list {

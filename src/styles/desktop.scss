@@ -1,5 +1,19 @@
 @import './variables';
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+}
+
 .body {
   max-width: 1440px;
   margin: auto;
@@ -7,15 +21,16 @@
   font-family: 'Roboto', Arial, sans-serif;
 }
 
-.header {
-  &-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.wrapper {
+  @include flex-center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    margin: 18px 120px;
-  }
+  margin: 0 120px;
+}
+
+.header {
+  margin: 18px 0;
 }
 
 .local {
@@ -46,8 +61,8 @@
   margin-left: auto;
 
   &-title {
-    display: flex;
-    align-items: center;
+    @include flex-center;
+
     padding-left: 14px;
 
     font-weight: 500;
@@ -68,8 +83,7 @@
 
   &-what,
   &-where {
-    display: flex;
-    align-items: center;
+    @include flex-center;
 
     height: 100%;
     padding: 0 8px;
@@ -168,4 +182,214 @@
       color: #fff;
     }
   }
+}
+
+.main-wrapper {
+  padding: 3px 5px 50px;
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 10px;
+
+  font-family: 'Akrobat', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #000;
+}
+
+.restaurants {
+  padding-left: 2px;
+}
+
+.item {
+  position: relative;
+
+  display: flex;
+  row-gap: 4px;
+  flex-direction: column;
+
+  padding: 0 5px;
+
+  &-img {
+    order: -1;
+
+    margin-left: -5px;
+    margin-bottom: 5px;
+
+    border-radius: 20px;
+  }
+
+  &-lid {
+    display: flex;
+    justify-content: space-between;
+
+    color: $text-dark;
+  }
+
+  &-title {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+  }
+}
+
+.rating {
+  @include flex-center;
+  gap: 9px;
+
+  &-stars {
+    padding-left: 23px;
+
+    color: $text-red;
+    font-size: 14px;
+    font-weight: 500;
+
+    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 112% -12px no-repeat;
+  }
+
+  &-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: $price-template;
+  }
+}
+
+.workhours {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  display: flex;
+
+  margin: 0;
+  padding: 8px 12px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+
+  background-image: linear-gradient(to right, #6e4842, #aa8b81);
+  border-radius: 16px;
+
+  &-title {
+    color: $text-dt--gray;
+  }
+
+  &-desc {
+    margin-left: 4px;
+
+    color: $text-dd--gray;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+
+    color: $text-dark;
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 500;
+  }
+
+  &-right {
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 700;
+  }
+}
+
+.list-position {
+  color: $res-location;
+}
+
+.cuisine {
+  position: relative;
+
+  @include flex-center;
+
+  height: 20px;
+  padding-left: 28px;
+
+  &::before {
+    content: '';
+
+    @include icons;
+
+    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 94% 43.47826086956522% no-repeat;
+  }
+}
+
+.check {
+  @include flex-center;
+  justify-content: space-between;
+
+  &-wrapper {
+    padding-right: 8px;
+  }
+
+  &-coin:nth-of-type(1),
+  &-coin:nth-of-type(2) {
+    fill: $text-dark;
+  }
+
+  &-coin:nth-of-type(3),
+  &-coin:nth-of-type(4) {
+    fill: $price-template;
+  }
+
+  &-average {
+    position: relative;
+
+    @include flex-center;
+
+    height: 20px;
+    padding-left: 32px;
+
+    border-left: 1px solid $price-template;
+
+    &::before {
+      content: '';
+
+      @include icons;
+      left: 8px;
+
+      background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 5% 91.978261% no-repeat;
+    }
+  }
+}
+
+.time {
+  position: relative;
+
+  @include flex-center;
+
+  height: 20px;
+  margin-bottom: 4px;
+  padding-left: 25px;
+
+  color: $text-dark;
+
+  &::before {
+    content: '';
+
+    @include icons;
+    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 58.333333333333336% 54.34782608695652%
+      no-repeat;
+  }
+}
+
+.distans {
+  text-align: end;
+
+  color: $res-location;
+  line-height: 14px;
 }
