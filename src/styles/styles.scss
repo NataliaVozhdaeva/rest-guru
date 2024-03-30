@@ -1,4 +1,4 @@
-@import './libs';
+@import './variables';
 
 @font-face {
   font-family: 'Roboto';
@@ -32,7 +32,9 @@
     url('../assets/fonts/Akrobat/Akrobat-Regular.otf') format('otf');
 }
 
-$text-color: #584b4d;
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -49,21 +51,21 @@ html {
   transition: 0.3s;
 
   &:visited {
-    color: $text-color;
+    color: $text-dark;
   }
 
   &:hover {
-    color: $text-color;
+    color: $text-dark;
     font-weight: 500;
   }
 
   &:focus {
-    color: $text-color;
+    color: $text-dark;
     font-weight: 500;
   }
 
   &:active {
-    color: $text-color;
+    color: $text-dark;
     font-weight: 500;
   }
 }
@@ -72,6 +74,13 @@ html {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+
+  &-search {
+    width: 50px;
+    height: 40px;
+    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 63.63636363636363% -5px no-repeat, $bg;
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .header {

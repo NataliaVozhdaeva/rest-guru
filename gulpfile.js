@@ -13,6 +13,15 @@ function browsersync() {
 }
 
 const config = {
+  shape: {
+    dimension: {
+      maxWidth: 50,
+      maxHeight: 50,
+    },
+    spacing: {
+      padding: 10,
+    },
+  },
   mode: {
     css: {
       render: {

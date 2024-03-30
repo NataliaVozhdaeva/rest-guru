@@ -1,0 +1,105 @@
+@import './variables';
+
+.body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header {
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 18px 120px;
+  }
+}
+
+.local {
+  &-current {
+    margin-left: 20px;
+
+    vertical-align: middle;
+  }
+}
+
+.search {
+  display: flex;
+
+  height: 40px;
+  margin-left: auto;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+
+    font-weight: 500;
+    color: $text-black;
+    font-size: 17px;
+    line-height: 40px;
+  }
+
+  &-wrapper {
+    position: relative;
+
+    display: flex;
+
+    font-size: 17px;
+    line-height: 40px;
+
+    border: $input-border solid 1px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &-what,
+  &-where {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 8px;
+
+    font-size: 17px;
+    line-height: 40px;
+
+    border: none;
+    border-radius: 10px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $text-black;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: $text-black;
+      opacity: 1;
+    }
+    &:-moz-placeholder {
+      color: $text-black;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $text-black;
+      opacity: 1;
+    }
+  }
+
+  &-what {
+    width: 245px;
+  }
+
+  &-where {
+    width: 170px;
+  }
+
+  &-separator {
+    width: 1px;
+    background-image: linear-gradient(white 5px, $input-border 5px, $input-border 33px, white);
+    height: 100%;
+  }
+}

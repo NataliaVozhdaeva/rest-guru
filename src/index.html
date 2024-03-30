@@ -5,12 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vozhdaeva_test-Guru</title>
 
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" type="text/css " />
     <link rel="stylesheet" href="./styles/desktop.css" />
   </head>
-  <body>
-    <header class="header">Bla-bla-bla</header>
-    <main class="main">Bla-bla-bla</main>
+  <body class="body">
+    <header class="header">
+      <div class="header-wrapper">
+        <img src="./assets/images/logo.png" alt="Логотип сайта restaurant-guru" class="logo" />
+        <div class="search">
+          <div class="search-wrapper">
+            <div class="search-title">Найти:</div>
+            <input type="text" class="search-what" placeholder="Рестораны" />
+            <div class="search-separator"></div>
+            <div class="search-title">Где:</div>
+            <input type="text" class="search-where" placeholder="Москва" />
+          </div>
+          <button type="button" class="btn btn-search"><span hidden>Искать</span></button>
+        </div>
+        <div class="local">
+          <img
+            width="25"
+            height="18"
+            class="local-current"
+            src="./assets/images/ru-flag.png"
+            alt="русский язык"
+            data-lang="ru" />
+          <ul class="local-list list">
+            <li class="local-item" data-lang="ru" hidden>
+              <a href="" class="local-link link">
+                <img src="./assets/images/ru-flag.png" alt="русский" />
+                <span>Русский</span>
+              </a>
+            </li>
+            <li class="local-item" data-lang="en" hidden>
+              <a href="" class="local-link link">
+                <img src="./assets/images/en-flag.png" lang="english" alt="english" />
+                <span lang="english">English</span>
+              </a>
+            </li>
+            <li class="local-item" data-lang="es" hidden>
+              <a href="" class="local-link link">
+                <img src="./assets/images/es-flag.png" lang="español" alt="español" />
+                <span lang="español">Español</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <h1 hidden>Лучшие рестораны города</h1>
+    </main>
     <footer class="footer"></footer>
   </body>
 </html>
