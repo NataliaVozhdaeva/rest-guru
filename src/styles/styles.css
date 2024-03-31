@@ -353,6 +353,18 @@ p {
   text-decoration: none;
   transition: 0.3s;
 }
+.link:visited {
+  color: currentColor;
+}
+.link:focus {
+  color: currentColor;
+}
+.link:hover {
+  color: currentColor;
+}
+.link:active {
+  color: currentColor;
+}
 
 .btn {
   border: none;
@@ -362,7 +374,7 @@ p {
 .btn-search {
   width: 50px;
   height: 40px;
-  background: url("../assets/images/icons/css/svg/sprite.css-a2c63060.svg") 63.6363636364% -5px no-repeat, #754040;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 63.6363636364% -5px no-repeat, #754040;
   border-radius: 0 10px 10px 0;
 }
 .btn-search:hover {

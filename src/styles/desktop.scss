@@ -34,16 +34,10 @@
 }
 
 .local {
+  position: relative;
+
   display: flex;
   height: 40px;
-
-  &:hover {
-    cursor: pointer;
-
-    & .local-current {
-      transform: scale(1.15);
-    }
-  }
 
   &-current {
     align-self: center;
@@ -51,6 +45,56 @@
 
     vertical-align: middle;
     transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15);
+    }
+  }
+
+  &-list {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+
+    width: 165px;
+    padding: 10px 18px 4px;
+
+    background-color: #fff;
+    box-shadow: 0 0 8px #86878940;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  &-item {
+    &:not(:first-of-type) {
+      padding: 11px 0;
+    }
+
+    &--close {
+      @include flex-center;
+      justify-content: end;
+
+      & .btn {
+        width: 10px;
+        height: 10px;
+        padding: 4px 0;
+
+        background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 7% 90.978261% no-repeat;
+
+        &:hover {
+          background-color: $text-dark;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  &-link {
+    color: #000;
+
+    &:hover {
+      color: $text-dark;
+    }
   }
 }
 
@@ -165,32 +209,24 @@
 
   &-link {
     color: #fff;
-
-    &:visited {
-      color: #fff;
-    }
-
-    &:focus {
-      color: #fff;
-    }
-
-    &:hover {
-      color: #fff;
-    }
-
-    &:active {
-      color: #fff;
-    }
   }
 }
 
-.main-wrapper {
+.restaurants-wrapper {
   padding: 3px 5px 50px;
+  margin-right: 100px;
+}
+
+.allitems-link {
+  color: #00000099;
+  font-size: 15px;
+
+  transition: 0.2s;
 }
 
 .title {
   width: 100%;
-  margin-bottom: 10px;
+  margin: 0;
 
   font-family: 'Akrobat', 'Arial', sans-serif;
   font-size: 30px;
@@ -200,7 +236,24 @@
 }
 
 .restaurants {
+  max-width: 1212px;
+  overflow-x: hidden;
+
+  display: flex;
+  column-gap: 20px;
+
   padding-left: 2px;
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-lid {
+    @include flex-center;
+
+    width: 100%;
+    margin: 26px 20px 9px 0;
+  }
 }
 
 .item {
@@ -210,7 +263,14 @@
   row-gap: 4px;
   flex-direction: column;
 
-  padding: 0 5px;
+  padding: 0 0 50px 5px;
+
+  border-radius: 20px;
+
+  &:hover {
+    background-color: $text-dt--gray;
+    cursor: pointer;
+  }
 
   &-img {
     order: -1;
@@ -242,13 +302,26 @@
   gap: 9px;
 
   &-stars {
+    position: relative;
+
     padding-left: 23px;
 
     color: $text-red;
     font-size: 14px;
     font-weight: 500;
 
-    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 112% -12px no-repeat;
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+
+      background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 37.782609% 65.01030927835052% no-repeat;
+    }
   }
 
   &-amount {
@@ -324,7 +397,7 @@
 
     @include icons;
 
-    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 94% 43.47826086956522% no-repeat;
+    background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 94% -10px no-repeat;
   }
 }
 
@@ -362,7 +435,7 @@
       @include icons;
       left: 8px;
 
-      background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 5% 91.978261% no-repeat;
+      background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 94% 43.47826086956522% no-repeat;
     }
   }
 }
@@ -382,8 +455,7 @@
     content: '';
 
     @include icons;
-    background: url('../assets/images/icons/css/svg/sprite.css-a2c63060.svg') 58.333333333333336% 54.34782608695652%
-      no-repeat;
+    background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') -11px 65.01030927835052% no-repeat;
   }
 }
 
@@ -392,4 +464,35 @@
 
   color: $res-location;
   line-height: 14px;
+}
+
+.swiper-btn {
+  position: absolute;
+  top: calc(50% - 39px);
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: $text-dd--gray;
+
+  & .arrow {
+    fill: #616161;
+
+    &:hover {
+      fill: $text-red;
+    }
+  }
+
+  &--prev {
+    display: none;
+  }
+
+  &--next {
+    right: -15px;
+
+    & .arrow {
+      transform: rotate(180deg);
+    }
+  }
 }

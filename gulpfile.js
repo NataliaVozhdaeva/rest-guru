@@ -35,7 +35,7 @@ function buildSvg() {
   return (
     src('src/assets/images/icons/*.svg')
       .pipe(svgSprite(config))
-      // .pipe(dest('dist/images/img/icons'))
+      // .pipe(dest('dist/assets/images/icons'))
       .pipe(dest('src/assets/images/icons'))
   );
 }

@@ -17,20 +17,53 @@
 }
 
 .local {
+  position: relative;
   display: flex;
   height: 40px;
-}
-.local:hover {
-  cursor: pointer;
-}
-.local:hover .local-current {
-  transform: scale(1.15);
 }
 .local-current {
   align-self: center;
   margin-left: 20px;
   vertical-align: middle;
   transition: 0.2s;
+}
+.local-current:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+.local-list {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 165px;
+  padding: 10px 18px 4px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(134, 135, 137, 0.2509803922);
+  border-radius: 0px 0px 10px 10px;
+}
+.local-item:not(:first-of-type) {
+  padding: 11px 0;
+}
+.local-item--close {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.local-item--close .btn {
+  width: 10px;
+  height: 10px;
+  padding: 4px 0;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 7% 90.978261% no-repeat;
+}
+.local-item--close .btn:hover {
+  background-color: #5b484a;
+  border-radius: 2px;
+}
+.local-link {
+  color: #000;
+}
+.local-link:hover {
+  color: #5b484a;
 }
 
 .search {
@@ -123,26 +156,21 @@
 .breadcrumps-link {
   color: #fff;
 }
-.breadcrumps-link:visited {
-  color: #fff;
-}
-.breadcrumps-link:focus {
-  color: #fff;
-}
-.breadcrumps-link:hover {
-  color: #fff;
-}
-.breadcrumps-link:active {
-  color: #fff;
+
+.restaurants-wrapper {
+  padding: 3px 5px 50px;
+  margin-right: 100px;
 }
 
-.main-wrapper {
-  padding: 3px 5px 50px;
+.allitems-link {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  transition: 0.2s;
 }
 
 .title {
   width: 100%;
-  margin-bottom: 10px;
+  margin: 0;
   font-family: "Akrobat", "Arial", sans-serif;
   font-size: 30px;
   line-height: 35px;
@@ -151,7 +179,20 @@
 }
 
 .restaurants {
+  max-width: 1212px;
+  overflow-x: hidden;
+  display: flex;
+  column-gap: 20px;
   padding-left: 2px;
+}
+.restaurants-wrapper {
+  position: relative;
+}
+.restaurants-lid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 26px 20px 9px 0;
 }
 
 .item {
@@ -159,7 +200,12 @@
   display: flex;
   row-gap: 4px;
   flex-direction: column;
-  padding: 0 5px;
+  padding: 0 0 50px 5px;
+  border-radius: 20px;
+}
+.item:hover {
+  background-color: #d0c8c9;
+  cursor: pointer;
 }
 .item-img {
   order: -1;
@@ -185,11 +231,20 @@
   gap: 9px;
 }
 .rating-stars {
+  position: relative;
   padding-left: 23px;
   color: #a72536;
   font-size: 14px;
   font-weight: 500;
-  background: url("../assets/images/icons/css/svg/sprite.css-a2c63060.svg") 112% -12px no-repeat;
+}
+.rating-stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 37.782609% 65.0103092784% no-repeat;
 }
 .rating-amount {
   font-size: 14px;
@@ -254,7 +309,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-a2c63060.svg") 94% 43.4782608696% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% -10px no-repeat;
 }
 
 .check {
@@ -287,7 +342,7 @@
   width: 20px;
   height: 20px;
   left: 8px;
-  background: url("../assets/images/icons/css/svg/sprite.css-a2c63060.svg") 5% 91.978261% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% 43.4782608696% no-repeat;
 }
 
 .time {
@@ -306,12 +361,36 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-a2c63060.svg") 58.3333333333% 54.347826087% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") -11px 65.0103092784% no-repeat;
 }
 
 .distans {
   text-align: end;
   color: #847173;
   line-height: 14px;
+}
+
+.swiper-btn {
+  position: absolute;
+  top: calc(50% - 39px);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f6f4f4;
+}
+.swiper-btn .arrow {
+  fill: #616161;
+}
+.swiper-btn .arrow:hover {
+  fill: #a72536;
+}
+.swiper-btn--prev {
+  display: none;
+}
+.swiper-btn--next {
+  right: -15px;
+}
+.swiper-btn--next .arrow {
+  transform: rotate(180deg);
 }
 /*# sourceMappingURL=desktop.css.map */
