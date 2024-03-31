@@ -53,7 +53,7 @@
   width: 10px;
   height: 10px;
   padding: 4px 0;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 7% 90.978261% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 89.2857142857% 64.1509433962% no-repeat;
 }
 .local-item--close .btn:hover {
   background-color: #5b484a;
@@ -187,6 +187,7 @@
 }
 .restaurants-wrapper {
   position: relative;
+  min-width: 0;
 }
 .restaurants-lid {
   display: flex;
@@ -244,7 +245,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 37.782609% 65.0103092784% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 27.782609% 103.010309% no-repeat;
 }
 .rating-amount {
   font-size: 14px;
@@ -309,7 +310,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% -10px no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 51.782609% 103.010309% no-repeat;
 }
 
 .check {
@@ -342,7 +343,7 @@
   width: 20px;
   height: 20px;
   left: 8px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% 43.4782608696% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 103% 0% no-repeat;
 }
 
 .time {
@@ -361,7 +362,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") -11px 65.0103092784% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 0% 102.010309% no-repeat;
 }
 
 .distans {
@@ -385,7 +386,7 @@
   fill: #a72536;
 }
 .swiper-btn--prev {
-  display: none;
+  left: -15px;
 }
 .swiper-btn--next {
   right: -15px;
