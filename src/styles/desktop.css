@@ -157,11 +157,6 @@
   color: #fff;
 }
 
-.restaurants-wrapper {
-  padding: 3px 5px 50px;
-  margin-right: 100px;
-}
-
 .allitems-link {
   color: rgba(0, 0, 0, 0.6);
   font-size: 15px;
@@ -178,15 +173,20 @@
   color: #000;
 }
 
+.swiper {
+  overflow: hidden;
+}
+
 .restaurants {
-  max-width: 1212px;
-  overflow-x: hidden;
   display: flex;
-  column-gap: 20px;
-  padding-left: 2px;
+  padding-left: 10px;
 }
 .restaurants-wrapper {
   position: relative;
+  max-width: 1230px;
+  min-width: 0;
+  padding: 3px 5px 50px;
+  margin: auto;
 }
 .restaurants-lid {
   display: flex;
@@ -384,11 +384,14 @@
 .swiper-btn .arrow:hover {
   fill: #a72536;
 }
-.swiper-btn--prev {
+.swiper-btn:disabled {
   display: none;
 }
+.swiper-btn--prev {
+  left: -10px;
+}
 .swiper-btn--next {
-  right: -15px;
+  right: 0;
 }
 .swiper-btn--next .arrow {
   transform: rotate(180deg);

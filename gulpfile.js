@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 const svgSprite = require('gulp-svg-sprite');
+const webpackStream = require('webpack-stream');
 
 function browsersync() {
   browserSync.init({
@@ -71,6 +72,14 @@ function cleanDist() {
   return del('dist/**/*', { force: true });
 }
 
+function buildJs() {
+  return src('src/index.js')
+    .pipe(webpackStream(require('./webpack.config')))
+    .pipe(dest('dist/js'))
+    .pipe(dest('src/js'))
+    .pipe(browserSync.stream());
+}
+
 exports.clean = series(cleanDist);
-exports.build = series(cleanDist, buildSvg, buildSass, html, copyimg);
-exports.default = series([cleanDist, buildSvg, buildSass], parallel(browsersync, serve));
+exports.build = series(cleanDist, buildSvg, buildSass, buildJs, html, copyimg);
+exports.default = series([cleanDist, buildSvg, buildSass, buildJs], parallel(browsersync, serve));

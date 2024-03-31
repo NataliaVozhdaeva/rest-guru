@@ -212,11 +212,6 @@
   }
 }
 
-.restaurants-wrapper {
-  padding: 3px 5px 50px;
-  margin-right: 100px;
-}
-
 .allitems-link {
   color: #00000099;
   font-size: 15px;
@@ -235,17 +230,21 @@
   color: #000;
 }
 
+.swiper {
+  overflow: hidden;
+}
+
 .restaurants {
-  max-width: 1212px;
-  overflow-x: hidden;
-
   display: flex;
-  column-gap: 20px;
-
-  padding-left: 2px;
+  padding-left: 10px;
 
   &-wrapper {
     position: relative;
+
+    max-width: 1230px;
+    min-width: 0;
+    padding: 3px 5px 50px;
+    margin: auto;
   }
 
   &-lid {
@@ -484,12 +483,16 @@
     }
   }
 
-  &--prev {
+  &:disabled {
     display: none;
   }
 
+  &--prev {
+    left: -10px;
+  }
+
   &--next {
-    right: -15px;
+    right: 0;
 
     & .arrow {
       transform: rotate(180deg);
