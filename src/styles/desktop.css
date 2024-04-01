@@ -8,8 +8,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   margin: 0 120px;
 }
 
@@ -17,20 +18,27 @@
   margin: 18px 0;
 }
 
+.logo--small {
+  display: none;
+}
+
 .local {
   position: relative;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   height: 40px;
+  width: 40px;
+}
+.local:hover {
+  cursor: pointer;
+}
+.local:hover .local-current {
+  transform: scale(1.15);
 }
 .local-current {
-  align-self: center;
-  margin-left: 20px;
   vertical-align: middle;
   transition: 0.2s;
-}
-.local-current:hover {
-  cursor: pointer;
-  transform: scale(1.15);
 }
 .local-list {
   z-index: 2;
