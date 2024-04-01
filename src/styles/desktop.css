@@ -63,7 +63,7 @@
   width: 10px;
   height: 10px;
   padding: 4px 0;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 7% 90.978261% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 89.2857142857% 64.1509433962% no-repeat;
 }
 .local-item--close .btn:hover {
   background-color: #5b484a;
@@ -206,8 +206,6 @@
 
 .item.swiper-slide {
   display: flex;
-  max-width: 286px;
-  margin: auto;
 }
 
 .item {
@@ -260,7 +258,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 37.782609% 65.0103092784% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 26.6666666667% 100% no-repeat;
 }
 .rating-amount {
   font-size: 14px;
@@ -325,7 +323,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% -10px no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 53.3333333333% 100% no-repeat;
 }
 
 .check {
@@ -358,7 +356,7 @@
   width: 20px;
   height: 20px;
   left: 8px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 94% 43.4782608696% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 100% 0 no-repeat;
 }
 
 .time {
@@ -377,7 +375,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") -11px 65.0103092784% no-repeat;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 0 100% no-repeat;
 }
 
 .distans {

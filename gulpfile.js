@@ -14,15 +14,6 @@ function browsersync() {
 }
 
 const config = {
-  shape: {
-    dimension: {
-      maxWidth: 50,
-      maxHeight: 50,
-    },
-    spacing: {
-      padding: 10,
-    },
-  },
   mode: {
     css: {
       render: {
@@ -33,30 +24,25 @@ const config = {
 };
 
 function buildSvg() {
-  return (
-    src('src/assets/images/icons/*.svg')
-      .pipe(svgSprite(config))
-      // .pipe(dest('dist/assets/images/icons'))
-      .pipe(dest('src/assets/images/icons'))
-  );
+  return src('src/assets/images/icons/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(dest('dist/assets/images/icons'))
+    .pipe(dest('src/assets/images/icons'));
 }
 
 function buildSass() {
-  return (
-    src('src/styles/**/*.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass())
-      .on('error', sass.logError)
-      .pipe(sourcemaps.write('.'))
-      .pipe(dest('src/styles'))
-      // .pipe(dest('dist/styles'))
-      .pipe(browserSync.stream())
-  );
+  return src('src/styles/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('src/styles'))
+    .pipe(dest('dist/styles'))
+    .pipe(browserSync.stream());
 }
 
 function html() {
-  return src('src/**/*.html') /* .pipe(dest('dist/')) */
-    .pipe(browserSync.stream());
+  return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
 }
 
 function serve() {
@@ -64,8 +50,12 @@ function serve() {
   watch('src/**/*.html', html);
 }
 
-function copyimg() {
-  return src('src/assets/**/*.*').pipe(dest('dist/assets/'));
+function copyFonts() {
+  return src(['src/assets/fonts/**/*.*'], { encoding: false }).pipe(dest('dist/assets/fonts/'));
+}
+
+function copyImg() {
+  return src(['src/assets/images/**/*.png'], { encoding: false }).pipe(dest('dist/assets/images/'));
 }
 
 function cleanDist() {
@@ -81,5 +71,5 @@ function buildJs() {
 }
 
 exports.clean = series(cleanDist);
-exports.build = series(cleanDist, buildSvg, buildSass, buildJs, html, copyimg);
+exports.build = series(cleanDist, buildSvg, buildSass, buildJs, html, copyFonts, copyImg);
 exports.default = series([cleanDist, buildSvg, buildSass, buildJs], parallel(browsersync, serve));

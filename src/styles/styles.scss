@@ -83,13 +83,28 @@ p {
   transition: 0.3s;
 
   &-search {
+    position: relative;
+
     width: 50px;
     height: 40px;
-    background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 63.63636363636363% -5px no-repeat, $bg;
+
     border-radius: 0 10px 10px 0;
+    background-color: $bg;
 
     &:hover {
       background-color: $res-location;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 10px;
+
+      width: 30px;
+      height: 30px;
+
+      background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 69.23076923076923% 0 no-repeat;
     }
   }
 }

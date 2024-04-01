@@ -91,7 +91,8 @@
         height: 10px;
         padding: 4px 0;
 
-        background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 7% 90.978261% no-repeat;
+        background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 89.28571428571429% 64.15094339622641%
+          no-repeat;
 
         &:hover {
           background-color: $text-dark;
@@ -269,8 +270,6 @@
 
 .item.swiper-slide {
   display: flex;
-  max-width: 286px;
-  margin: auto;
 }
 
 .item {
@@ -339,7 +338,7 @@
       width: 20px;
       height: 20px;
 
-      background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 37.782609% 65.01030927835052% no-repeat;
+      background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 26.666666666666668% 100% no-repeat;
     }
   }
 
@@ -416,7 +415,7 @@
 
     @include icons;
 
-    background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 94% -10px no-repeat;
+    background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 53.333333333333336% 100% no-repeat;
   }
 }
 
@@ -454,7 +453,7 @@
       @include icons;
       left: 8px;
 
-      background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') 94% 43.47826086956522% no-repeat;
+      background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 100% 0 no-repeat;
     }
   }
 }
@@ -474,7 +473,7 @@
     content: '';
 
     @include icons;
-    background: url('../assets/images/icons/css/svg/sprite.css-436ef025.svg') -11px 65.01030927835052% no-repeat;
+    background: url('../assets/images/icons/css/svg/sprite.css-c637028f.svg') 0 100% no-repeat;
   }
 }
 

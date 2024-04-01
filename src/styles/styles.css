@@ -372,12 +372,22 @@ p {
   transition: 0.3s;
 }
 .btn-search {
+  position: relative;
   width: 50px;
   height: 40px;
-  background: url("../assets/images/icons/css/svg/sprite.css-436ef025.svg") 63.6363636364% -5px no-repeat, #754040;
   border-radius: 0 10px 10px 0;
+  background-color: #754040;
 }
 .btn-search:hover {
   background-color: #847173;
+}
+.btn-search::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 69.2307692308% 0 no-repeat;
 }
 /*# sourceMappingURL=styles.css.map */
