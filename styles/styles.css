@@ -378,16 +378,16 @@ p {
   border-radius: 0 10px 10px 0;
   background-color: #754040;
 }
+.btn-search:hover {
+  background-color: #847173;
+}
 .btn-search::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 10px;
   width: 30px;
   height: 30px;
-  background: url(../assets/images/icons/css/svg/sprite.css-c637028f.svg) 69.636364% -13% no-repeat;
-}
-.btn-search:hover {
-  background-color: #847173;
+  background: url("../assets/images/icons/css/svg/sprite.css-c637028f.svg") 69.2307692308% 0 no-repeat;
 }
 /*# sourceMappingURL=styles.css.map */
