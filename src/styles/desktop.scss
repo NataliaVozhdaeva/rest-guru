@@ -234,18 +234,14 @@
 }
 
 .swiper {
-  overflow: hidden;
+  width: 85%;
+  margin: auto;
 }
 
 .restaurants {
-  display: flex;
-  padding-left: 10px;
-
   &-wrapper {
     position: relative;
 
-    max-width: 1230px;
-    min-width: 0;
     padding: 3px 5px 50px;
     margin: auto;
   }
@@ -253,19 +249,30 @@
   &-lid {
     @include flex-center;
 
-    width: 100%;
-    margin: 26px 20px 9px 0;
+    width: 85%;
+    margin: 26px auto 9px;
   }
+}
+
+.allitems-link {
+  margin-right: 20px;
+}
+
+.item.swiper-slide {
+  display: flex;
+  max-width: 286px;
+  margin: auto;
 }
 
 .item {
   position: relative;
 
-  display: flex;
+  flex-shrink: 0;
+
   row-gap: 4px;
   flex-direction: column;
 
-  padding: 0 0 50px 5px;
+  padding-bottom: 20px;
 
   border-radius: 20px;
 
@@ -277,9 +284,10 @@
   &-img {
     order: -1;
 
-    margin-left: -5px;
+    max-width: 100%;
     margin-bottom: 5px;
 
+    object-fit: cover;
     border-radius: 20px;
   }
 
@@ -469,6 +477,7 @@
 }
 
 .swiper-btn {
+  z-index: 2;
   position: absolute;
   top: calc(50% - 39px);
 
@@ -491,11 +500,11 @@
   }
 
   &--prev {
-    left: -10px;
+    left: 6%;
   }
 
   &--next {
-    right: 0;
+    right: 6%;
 
     & .arrow {
       transform: rotate(180deg);
