@@ -5,6 +5,14 @@ const locationItems = document.querySelectorAll('.local-item');
 
 const closeLocationList = () => {
   locationList.setAttribute('hidden', '');
+
+  document.removeEventListener('click', docListener);
+};
+
+const docListener = (e) => {
+  if (e.currentTarget !== locationList && e.target !== localBtn && e.target !== currentLocation) {
+    closeLocationList();
+  }
 };
 
 const changeLocation = (e) => {
@@ -47,11 +55,7 @@ const handleLocation = () => {
   locationList.removeAttribute('hidden');
 
   locationList.addEventListener('click', changeLocation);
-  document.addEventListener('click', (e) => {
-    if (e.currentTarget !== locationList && e.target !== localBtn && e.target !== currentLocation) {
-      closeLocationList();
-    }
-  });
+  document.addEventListener('click', docListener);
 };
 
 const locationHandler = () => {
