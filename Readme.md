@@ -7,11 +7,11 @@
 
 ### Made
 
-[x] changing location;
-[x] slider - [swiper.js](https://swiperjs.com/);
-[x] progressive img-loading;
-[x] svg-sprite;
-[x] liquid layout from 320px to 1440px(1920px).
+- [x] changing location;
+- [x] slider - [swiper.js](https://swiperjs.com/);
+- [x] progressive img-loading;
+- [x] svg-sprite;
+- [x] liquid layout from 320px to 1440px(1920px).
 
 ### Used
 
