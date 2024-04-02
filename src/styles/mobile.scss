@@ -1,6 +1,5 @@
 @media only screen and (max-width: 1300px) {
   .item {
-    max-width: 286px;
     margin: auto;
   }
 }
@@ -33,14 +32,18 @@
   }
 
   .wrapper {
+    justify-content: center;
+    gap: 0;
+
     margin: 0;
     padding: 0 10px;
-    justify-content: center;
   }
 
   .logo,
   .aside,
-  .allitems-link {
+  .allitems-link,
+  .swiper-btn,
+  .content-right {
     display: none;
   }
 
@@ -53,6 +56,11 @@
   .local {
     position: absolute;
     right: 10px;
+
+    &-list {
+      right: 10px;
+      top: -2px;
+    }
   }
 
   .title {
@@ -62,11 +70,67 @@
     font-size: 24px;
   }
 
+  .restaurants {
+    &-lid {
+      margin: 10 auto 10px;
+    }
+  }
+
   .swiper {
     width: 100%;
   }
 
-  .item-img {
-    height: auto;
+  .item {
+    &-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-img {
+      height: auto;
+    }
+  }
+
+  .rating {
+    &-amount {
+      display: none;
+    }
+
+    &-stars {
+      font-size: 16px;
+    }
+  }
+
+  .content-left {
+    flex-wrap: wrap;
+
+    max-height: 42px;
+    width: 100%;
+  }
+
+  .cuisine {
+    order: -1;
+  }
+
+  .cuisine,
+  .list-position {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .check {
+    align-self: flex-end;
+
+    &-wrapper {
+      padding-right: 0;
+    }
+
+    &-average {
+      display: none;
+    }
+  }
+
+  .swiper-scrollbar {
+    margin-top: 30px;
   }
 }

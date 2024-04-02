@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use(Navigation);
 
 const swiper = new Swiper('.swiper', {
   navigation: {
@@ -15,12 +15,10 @@ const swiper = new Swiper('.swiper', {
     pageUpDown: true,
   },
 
+  slidesPerView: 1,
   spaceBetween: 20,
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
     640: {
       slidesPerView: 2,
     },

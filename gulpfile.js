@@ -57,12 +57,6 @@ function html() {
   return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
 }
 
-function serve() {
-  watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
-  watch('src/**/*.scss', buildSass);
-  watch('src/**/*.html', html);
-}
-
 function copyFonts() {
   return src(['src/assets/fonts/**/*.*'], { encoding: false }).pipe(dest('dist/assets/fonts/'));
 }
@@ -82,6 +76,12 @@ function buildJs() {
     .pipe(dest('dist/js'))
     .pipe(dest('src/js'))
     .pipe(browserSync.stream());
+}
+
+function serve() {
+  watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
+  watch('src/**/*.scss', buildSass);
+  watch('src/**/*.html', html);
 }
 
 exports.clean = series(cleanDist);

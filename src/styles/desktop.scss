@@ -103,10 +103,14 @@
   }
 
   &-link {
+    @include flex-center;
+    column-gap: 15px;
+
     color: #000;
+    font-size: 15px;
 
     &:hover {
-      color: $text-dark;
+      color: $text-red;
     }
   }
 }
@@ -281,19 +285,17 @@
   margin-right: 20px;
 }
 
-.item.swiper-slide {
-  display: flex;
-}
-
 .item {
   position: relative;
 
+  display: flex;
   flex-shrink: 0;
-
   row-gap: 4px;
   flex-direction: column;
 
+  max-width: 286px;
   padding-bottom: 20px;
+  margin: auto;
 
   border-radius: 20px;
 
@@ -498,7 +500,7 @@
 }
 
 .swiper-btn {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: calc(50% - 39px);
 
