@@ -1,0 +1,99 @@
+@media only screen and (max-width: 1300px) {
+  .item {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .search input {
+    max-width: 120px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .search {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .header {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: #d5d8da solid 1px;
+    background-color: #fff;
+  }
+  .wrapper {
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .logo,
+.aside,
+.allitems-link,
+.swiper-btn,
+.content-right {
+    display: none;
+  }
+  .logo--small {
+    display: inline-block;
+  }
+  .local {
+    position: absolute;
+    right: 10px;
+  }
+  .local-list {
+    right: 10px;
+    top: -2px;
+  }
+  .title {
+    z-index: -1;
+    position: relative;
+    font-size: 24px;
+  }
+  .restaurants-lid {
+    margin: 10 auto 10px;
+  }
+  .swiper {
+    width: 100%;
+  }
+  .item-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .item-img {
+    height: auto;
+  }
+  .rating-amount {
+    display: none;
+  }
+  .rating-stars {
+    font-size: 16px;
+  }
+  .content-left {
+    flex-wrap: wrap;
+    max-height: 42px;
+    width: 100%;
+  }
+  .cuisine {
+    order: -1;
+  }
+  .cuisine,
+.list-position {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .check {
+    align-self: flex-end;
+  }
+  .check-wrapper {
+    padding-right: 0;
+  }
+  .check-average {
+    display: none;
+  }
+  .swiper-scrollbar {
+    margin-top: 30px;
+  }
+}
