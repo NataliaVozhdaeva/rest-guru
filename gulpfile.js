@@ -3,8 +3,12 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
 const svgSprite = require('gulp-svg-sprite');
 const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
 function browsersync() {
   browserSync.init({
@@ -35,8 +39,16 @@ function buildSass() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(sourcemaps.write('.'))
     .pipe(dest('src/styles'))
+    .pipe(
+      postcss([
+        autoprefixer({
+          overrideBrowserslist: ['last 2 versions'],
+        }),
+        cssnano(),
+      ])
+    )
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/styles'))
     .pipe(browserSync.stream());
 }
@@ -46,6 +58,7 @@ function html() {
 }
 
 function serve() {
+  watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
   watch('src/**/*.scss', buildSass);
   watch('src/**/*.html', html);
 }
@@ -55,7 +68,7 @@ function copyFonts() {
 }
 
 function copyImg() {
-  return src(['src/assets/images/**/*.{png,gif}'], { encoding: false }).pipe(dest('dist/assets/images/'));
+  return src(['src/assets/images/**/*.{gif,png}'], { encoding: false }).pipe(dest('dist/assets/images/'));
 }
 
 function cleanDist() {
@@ -65,6 +78,7 @@ function cleanDist() {
 function buildJs() {
   return src('src/index.js')
     .pipe(webpackStream(require('./webpack.config')))
+    .pipe(rename('main.min.js'))
     .pipe(dest('dist/js'))
     .pipe(dest('src/js'))
     .pipe(browserSync.stream());
