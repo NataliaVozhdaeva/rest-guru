@@ -153,6 +153,19 @@
     &:focus-visible {
       outline: none;
       background-color: $text-dt--gray;
+
+      &::-webkit-input-placeholder {
+        opacity: 0.2;
+      }
+      &::-moz-placeholder {
+        opacity: 0.2;
+      }
+      &:-moz-placeholder {
+        opacity: 0.2;
+      }
+      &:-ms-input-placeholder {
+        opacity: 0.52;
+      }
     }
 
     &::-webkit-input-placeholder {

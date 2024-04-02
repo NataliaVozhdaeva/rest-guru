@@ -110,6 +110,18 @@
   outline: none;
   background-color: #d0c8c9;
 }
+.search-what:focus-visible::-webkit-input-placeholder, .search-where:focus-visible::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+.search-what:focus-visible::-moz-placeholder, .search-where:focus-visible::-moz-placeholder {
+  opacity: 0.2;
+}
+.search-what:focus-visible:-moz-placeholder, .search-where:focus-visible:-moz-placeholder {
+  opacity: 0.2;
+}
+.search-what:focus-visible:-ms-input-placeholder, .search-where:focus-visible:-ms-input-placeholder {
+  opacity: 0.52;
+}
 .search-what::-webkit-input-placeholder, .search-where::-webkit-input-placeholder {
   color: #010101;
   opacity: 1;

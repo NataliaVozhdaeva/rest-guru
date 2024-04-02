@@ -55,7 +55,7 @@ function copyFonts() {
 }
 
 function copyImg() {
-  return src(['src/assets/images/**/*.png'], { encoding: false }).pipe(dest('dist/assets/images/'));
+  return src(['src/assets/images/**/*.{png,gif}'], { encoding: false }).pipe(dest('dist/assets/images/'));
 }
 
 function cleanDist() {
